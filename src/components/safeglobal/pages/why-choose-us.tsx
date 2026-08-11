@@ -194,34 +194,7 @@ export function WhyChooseUsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-navy-gradient py-16">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:px-6 md:flex-row md:text-left lg:px-8">
-          <div>
-            <h2 className="text-2xl font-semibold text-white sm:text-3xl">
-              Experience the Safeglobal difference
-            </h2>
-            <p className="mt-2 text-white/70">
-              Let&apos;s discuss how we can strengthen your supply chain.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Button
-              onClick={() => openInquiry()}
-              className="rounded-full bg-gold text-navy hover:bg-gold-soft"
-            >
-              Request a Quote
-            </Button>
-            <Button
-              onClick={() => setPage("contact")}
-              variant="outline"
-              className="rounded-full border-white/30 bg-white/5 text-white hover:bg-white/10 hover:text-white"
-            >
-              Get in touch
-            </Button>
-          </div>
-        </div>
-      </section>
+
     </>
   );
 }

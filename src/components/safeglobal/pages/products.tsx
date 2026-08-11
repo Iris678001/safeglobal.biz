@@ -176,36 +176,7 @@ export function ProductsPage() {
         })}
       </div>
 
-      {/* Summary CTA */}
-      <section className="bg-navy-gradient py-16">
-        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-          <Reveal>
-            <h2 className="text-balance text-2xl font-semibold text-white sm:text-3xl">
-              Need a specific grade or custom specification?
-            </h2>
-            <p className="mt-3 text-white/70">
-              Our trade desk sources bespoke grades and packaging for clients
-              with specialised requirements.
-            </p>
-            <div className="mt-7 flex flex-wrap justify-center gap-3">
-              <Button
-                onClick={() => openInquiry()}
-                className="bg-gold text-navy hover:bg-gold-soft"
-              >
-                Request a Quote
-              </Button>
-              <Button
-                onClick={() => setPage("why-us")}
-                variant="outline"
-                className="border-white/30 bg-white/5 text-white hover:bg-white/10 hover:text-white"
-              >
-                Why choose Safeglobal
-                <ChevronRight className="ml-1 h-4 w-4" />
-              </Button>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+
     </>
   );
 }
