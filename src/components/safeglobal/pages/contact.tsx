@@ -287,7 +287,7 @@ export function ContactPage() {
                 <div className="overflow-hidden rounded-3xl border border-border shadow-soft">
                   <iframe
                     title="Safeglobal office location"
-                    src="https://www.google.com/maps?q=Sheikh+Zayed+Road,+Dubai,+UAE&output=embed"
+                    src="https://www.google.com/maps?q=Amber+Gem+Tower,+UAE&output=embed"
                     className="h-72 w-full sm:h-80"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"

@@ -479,9 +479,9 @@ export const WORKFLOW: WorkflowStep[] = [
 
 /* ---------------- Contact info ---------------- */
 export const CONTACT = {
-  address: "Level 42, Emirates Towers, Dubai, UAE",
+  address: "UAE Amber Gem Tower",
   phone: "+971 569891213",
-  email: "chand.mohamed@safeglobal.world",
+  email: "chand.mohamed@safeglobal.biz",
   hours: "Sunday – Thursday · 9:00 AM – 6:00 PM (GST)",
   social: [
     { label: "LinkedIn", href: "#" },
