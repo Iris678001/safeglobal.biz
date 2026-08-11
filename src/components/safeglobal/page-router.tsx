@@ -10,9 +10,10 @@ import { IndustriesPage } from "./pages/industries";
 import { GlobalNetworkPage } from "./pages/global-network";
 import { WhyChooseUsPage } from "./pages/why-choose-us";
 import { ContactPage } from "./pages/contact";
+import { ProductDetailPage } from "./pages/product-detail";
 import type { PageId } from "@/lib/site-data";
 
-const PAGES: Record<PageId, React.ComponentType> = {
+const PAGES: Partial<Record<PageId, React.ComponentType>> = {
   home: HomePage,
   about: AboutPage,
   products: ProductsPage,
@@ -24,7 +25,15 @@ const PAGES: Record<PageId, React.ComponentType> = {
 
 export function PageRouter() {
   const { activePage, pendingAnchor, consumeAnchor } = useNavStore();
-  const Page = PAGES[activePage];
+
+  let PageContent;
+  if (activePage.startsWith("product-")) {
+    const productId = activePage.replace("product-", "");
+    PageContent = <ProductDetailPage productId={productId} />;
+  } else {
+    const Page = PAGES[activePage] || HomePage;
+    PageContent = <Page />;
+  }
 
   // Scroll to top (or anchor) whenever the page changes.
   useEffect(() => {
@@ -52,7 +61,7 @@ export function PageRouter() {
           exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Page />
+          {PageContent}
         </motion.div>
       </AnimatePresence>
     </main>

@@ -49,33 +49,7 @@ export function Navbar() {
             className="group flex items-center gap-2.5"
             aria-label="Safeglobal home"
           >
-            <span
-              className={cn(
-                "relative flex h-10 w-10 items-center justify-center rounded-xl transition-colors",
-                solid ? "bg-navy text-white" : "bg-white/10 text-white ring-1 ring-white/20",
-              )}
-            >
-              <Globe className="h-5 w-5" />
-              <span className="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full bg-gold ring-2 ring-background" />
-            </span>
-            <span className="flex flex-col leading-none">
-              <span
-                className={cn(
-                  "text-lg font-semibold tracking-tight transition-colors",
-                  solid ? "text-navy" : "text-white",
-                )}
-              >
-                Safe<span className="text-gradient-gold">global</span>
-              </span>
-              <span
-                className={cn(
-                  "mt-0.5 text-[10px] font-medium uppercase tracking-[0.22em] transition-colors",
-                  solid ? "text-muted-foreground" : "text-white/60",
-                )}
-              >
-                Global Trading
-              </span>
-            </span>
+            <img src="/logo.png" alt="Safeglobal" className="h-16 w-auto object-contain" />
           </button>
 
           {/* Desktop nav */}
@@ -135,7 +109,7 @@ export function Navbar() {
                               return (
                                 <button
                                   key={p.id}
-                                  onClick={() => go("products")}
+                                  onClick={() => go(`product-${p.id}` as PageId)}
                                   className="group flex items-start gap-3 rounded-xl p-3 text-left transition-colors hover:bg-white/80"
                                 >
                                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-navy/5 text-navy transition-colors group-hover:bg-navy group-hover:text-white">
@@ -210,12 +184,7 @@ export function Navbar() {
           <div className="flex h-full flex-col">
             <div className="flex items-center justify-between border-b border-border px-5 py-4">
               <span className="flex items-center gap-2">
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy text-white">
-                  <Globe className="h-4.5 w-4.5" />
-                </span>
-                <span className="text-lg font-semibold text-navy">
-                  Safe<span className="text-gradient-gold">global</span>
-                </span>
+                <img src="/logo.png" alt="Safeglobal" className="h-12 w-auto object-contain" />
               </span>
               <button
                 onClick={() => setMobileMenuOpen(false)}

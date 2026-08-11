@@ -37,29 +37,19 @@ export function HomePage() {
         {/* bg image */}
         <div className="absolute inset-0">
           <img
-            src={IMAGES.hero}
+            src="/hero-ship.jpg"
             alt="Global cargo shipping port at dusk"
-            className="h-full w-full object-cover opacity-35"
+            className="h-full w-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-navy/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-navy-deep/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy-deep/75 to-navy/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-transparent to-navy-deep/40" />
         </div>
 
-        {/* floating decorative orbs */}
-        <div className="pointer-events-none absolute right-[8%] top-[22%] h-40 w-40 rounded-full bg-brand-blue/25 blur-3xl animate-glow" />
-        <div className="pointer-events-none absolute left-[10%] bottom-[18%] h-52 w-52 rounded-full bg-gold/10 blur-3xl animate-glow" />
+
 
         <div className="relative mx-auto w-full max-w-7xl px-4 pt-32 pb-20 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80 backdrop-blur"
-            >
-              <span className="flex h-1.5 w-1.5 rounded-full bg-gold" />
-              Trusted B2B supplier across 45+ countries
-            </motion.div>
+
 
             <motion.h1
               initial={{ opacity: 0, y: 22 }}
@@ -93,7 +83,7 @@ export function HomePage() {
               <Button
                 onClick={() => setPage("products")}
                 size="lg"
-                className="rounded-full bg-gold text-navy hover:bg-gold-soft"
+                className="bg-gold text-navy hover:bg-gold-soft"
               >
                 Explore Products
                 <ArrowRight className="ml-1 h-4 w-4" />
@@ -102,7 +92,7 @@ export function HomePage() {
                 onClick={() => setPage("about")}
                 size="lg"
                 variant="outline"
-                className="rounded-full border-white/30 bg-white/5 text-white hover:bg-white/10 hover:text-white"
+                className="border-white/30 bg-white/5 text-white hover:bg-white/10 hover:text-white"
               >
                 About Safeglobal
               </Button>
@@ -152,15 +142,15 @@ export function HomePage() {
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <Reveal>
               <div className="relative">
-                <div className="overflow-hidden rounded-3xl shadow-soft-lg">
+                <div className="overflow-hidden rounded-none">
                   <img
-                    src={IMAGES.cargo}
+                    src="/ship.jpg"
                     alt="Container ship carrying global trade cargo"
                     className="aspect-[4/3] w-full object-cover"
                   />
                 </div>
                 {/* floating stat card */}
-                <div className="absolute -bottom-6 -right-4 w-44 rounded-2xl glass p-4 shadow-soft-lg sm:-right-6">
+                <div className="absolute -bottom-6 -right-4 w-44 rounded-sm glass p-4 sm:-right-6">
                   <div className="flex items-center gap-2 text-navy">
                     <TrendingUp className="h-4 w-4 text-brand-blue" />
                     <span className="text-xs font-semibold uppercase tracking-wide">
@@ -172,7 +162,7 @@ export function HomePage() {
                   </div>
                   <div className="text-xs text-muted-foreground">annual turnover</div>
                 </div>
-                <div className="absolute -left-4 -top-4 hidden h-20 w-20 items-center justify-center rounded-2xl bg-navy text-white shadow-navy sm:flex">
+                <div className="absolute -left-4 -top-4 hidden h-20 w-20 items-center justify-center rounded-none bg-navy text-white sm:flex">
                   <Anchor className="h-8 w-8" />
                 </div>
               </div>
@@ -210,9 +200,9 @@ export function HomePage() {
                 ].map(({ icon: Icon, title, text }) => (
                   <div
                     key={title}
-                    className="group rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-soft"
+                    className="group rounded-none border border-border bg-card p-5 transition-all hover:border-brand-blue/50 hover:bg-muted/30"
                   >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-navy/5 text-navy transition-colors group-hover:bg-navy group-hover:text-white">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-none bg-navy/5 text-navy transition-colors group-hover:bg-navy group-hover:text-white">
                       <Icon className="h-5 w-5" />
                     </div>
                     <h3 className="mt-3 text-sm font-semibold text-navy">{title}</h3>
@@ -224,7 +214,7 @@ export function HomePage() {
               </div>
               <Button
                 onClick={() => setPage("about")}
-                className="mt-8 rounded-full"
+                className="mt-8"
                 variant="secondary"
               >
                 Learn more about us
@@ -252,9 +242,9 @@ export function HomePage() {
                 <StaggerItem key={ind.id}>
                   <button
                     onClick={() => setPage("industries")}
-                    className="group flex h-full w-full flex-col items-center gap-3 rounded-2xl border border-border bg-card p-5 text-center transition-all hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-soft"
+                    className="group flex h-full w-full flex-col items-center gap-3 rounded-none border border-border bg-card p-5 text-center transition-all hover:border-brand-blue/50 hover:bg-muted/30"
                   >
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy/5 text-navy transition-all group-hover:bg-navy group-hover:text-white">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-none bg-navy/5 text-navy transition-all group-hover:bg-navy group-hover:text-white">
                       <Icon className="h-6 w-6" />
                     </span>
                     <span className="text-sm font-semibold text-navy">{ind.name}</span>
@@ -280,7 +270,7 @@ export function HomePage() {
               <Button
                 onClick={() => setPage("products")}
                 variant="outline"
-                className="shrink-0 rounded-full"
+                className="shrink-0"
               >
                 View all products
                 <ArrowRight className="ml-1 h-4 w-4" />
@@ -295,7 +285,7 @@ export function HomePage() {
                 <StaggerItem key={p.id}>
                   <button
                     onClick={() => setPage("products")}
-                    className="group block w-full overflow-hidden rounded-3xl border border-border bg-card text-left shadow-soft transition-all hover:-translate-y-1.5 hover:shadow-soft-lg"
+                    className="group block w-full overflow-hidden rounded-none border border-border bg-card text-left transition-all hover:border-brand-blue/50"
                   >
                     <div className="relative aspect-[16/10] overflow-hidden">
                       <img
@@ -304,7 +294,7 @@ export function HomePage() {
                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-navy-deep/10 to-transparent" />
-                      <div className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white/90 text-navy backdrop-blur">
+                      <div className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-none bg-white/90 text-navy">
                         <Icon className="h-5 w-5" />
                       </div>
                       <div className="absolute bottom-4 left-4 right-4">
@@ -329,7 +319,7 @@ export function HomePage() {
             <StaggerItem>
               <button
                 onClick={() => setPage("products")}
-                className="group flex h-full min-h-[260px] w-full flex-col justify-between rounded-3xl bg-navy-gradient p-6 text-left text-white shadow-navy transition-all hover:-translate-y-1.5"
+                className="group flex h-full min-h-[260px] w-full flex-col justify-between rounded-none bg-navy-gradient p-6 text-left text-white transition-all hover:bg-navy"
               >
                 <div>
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/20">
@@ -371,9 +361,9 @@ export function HomePage() {
               const Icon = w.icon;
               return (
                 <StaggerItem key={w.step}>
-                  <div className="group relative h-full rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition-all hover:border-gold/30 hover:bg-white/10">
+                  <div className="group relative h-full rounded-none border border-white/10 bg-white/5 p-5 transition-all hover:border-gold/50 hover:bg-white/10">
                     <div className="flex items-center justify-between">
-                      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-gold ring-1 ring-white/15">
+                      <span className="flex h-10 w-10 items-center justify-center rounded-none bg-white/10 text-gold ring-1 ring-white/15">
                         <Icon className="h-5 w-5" />
                       </span>
                       <span className="text-xs font-semibold text-white/40">
@@ -397,7 +387,7 @@ export function HomePage() {
               <Button
                 onClick={() => setPage("network")}
                 variant="outline"
-                className="rounded-full border-white/30 bg-white/5 text-white hover:bg-white/10 hover:text-white"
+                className="border-white/30 bg-white/5 text-white hover:bg-white/10 hover:text-white"
               >
                 See our global network
                 <ArrowRight className="ml-1 h-4 w-4" />
@@ -407,23 +397,6 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* ============== STATS / COUNTERS ============== */}
-      <section className="bg-background py-20 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-6 rounded-3xl border border-border bg-card p-8 shadow-soft sm:p-10 lg:grid-cols-4">
-            {STATS.map((s, i) => (
-              <Reveal key={s.label} delay={i * 0.08}>
-                <div className="text-center">
-                  <div className="text-4xl font-semibold tracking-tight text-navy sm:text-5xl">
-                    <AnimatedCounter value={s.value} suffix={s.suffix} />
-                  </div>
-                  <div className="mt-2 text-sm text-muted-foreground">{s.label}</div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ============== WHY CHOOSE US (preview) ============== */}
       <section className="bg-muted/40 py-20 sm:py-28">
@@ -440,8 +413,8 @@ export function HomePage() {
               const Icon = r.icon;
               return (
                 <StaggerItem key={r.title}>
-                  <div className="group h-full rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-soft">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy/5 text-navy transition-colors group-hover:bg-brand-blue group-hover:text-white">
+                  <div className="group h-full rounded-none border border-border bg-card p-6 transition-all hover:border-brand-blue/50 hover:bg-muted/30">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-none bg-navy/5 text-navy transition-colors group-hover:bg-brand-blue group-hover:text-white">
                       <Icon className="h-5 w-5" />
                     </div>
                     <h3 className="mt-4 text-base font-semibold text-navy">
@@ -460,7 +433,7 @@ export function HomePage() {
               <Button
                 onClick={() => setPage("why-us")}
                 variant="outline"
-                className="rounded-full"
+                className=""
               >
                 See all reasons
                 <ArrowRight className="ml-1 h-4 w-4" />
@@ -474,9 +447,8 @@ export function HomePage() {
       <section className="relative overflow-hidden bg-background py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="relative overflow-hidden rounded-[2rem] bg-navy-radial p-8 text-white shadow-navy sm:p-14">
+            <div className="relative overflow-hidden rounded-none bg-navy-radial p-8 text-white sm:p-14">
               <div className="pointer-events-none absolute inset-0 bg-grid opacity-25" />
-              <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-gold/15 blur-3xl" />
               <div className="relative">
                 <Quote className="h-10 w-10 text-gold" />
                 <p className="mt-5 text-balance text-2xl font-medium leading-relaxed sm:text-3xl">
@@ -485,7 +457,7 @@ export function HomePage() {
                   assurance and logistics coordination are simply best in class.&rdquo;
                 </p>
                 <div className="mt-7 flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-sm font-semibold text-gold ring-1 ring-white/20">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-none bg-white/10 text-sm font-semibold text-gold ring-1 ring-white/20">
                     MK
                   </div>
                   <div>
@@ -499,14 +471,14 @@ export function HomePage() {
                 <div className="mt-10 flex flex-wrap gap-3 border-t border-white/10 pt-8">
                   <Button
                     onClick={() => openInquiry()}
-                    className="rounded-full bg-gold text-navy hover:bg-gold-soft"
+                    className="bg-gold text-navy hover:bg-gold-soft"
                   >
                     Request a Quote
                   </Button>
                   <Button
                     onClick={() => setPage("contact")}
                     variant="outline"
-                    className="rounded-full border-white/30 bg-white/5 text-white hover:bg-white/10 hover:text-white"
+                    className="border-white/30 bg-white/5 text-white hover:bg-white/10 hover:text-white"
                   >
                     Talk to our trade desk
                   </Button>

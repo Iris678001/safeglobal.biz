@@ -21,9 +21,7 @@ export function PageHero({
 }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden bg-navy-radial pt-36 pb-16 text-white sm:pt-44 sm:pb-20">
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-30" />
-      <div className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-brand-blue/20 blur-3xl" />
-      <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
+
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* breadcrumb */}

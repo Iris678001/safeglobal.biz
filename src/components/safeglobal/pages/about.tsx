@@ -17,8 +17,6 @@ import { Reveal, StaggerGroup, StaggerItem } from "../reveal";
 import {
   IMAGES,
   CORE_VALUES,
-  MILESTONES,
-  LEADERS,
   OFFICES,
   STATS,
 } from "@/lib/site-data";
@@ -228,87 +226,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* Global trading expertise / timeline */}
-      <section className="bg-background py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Our Journey"
-              title="Milestones in our global growth"
-              description="Nearly two decades of expanding markets, capabilities and trust."
-            />
-          </Reveal>
-          <div className="relative mt-14">
-            {/* vertical line */}
-            <div className="absolute left-4 top-0 h-full w-px bg-border md:left-1/2 md:-translate-x-1/2" />
-            <div className="space-y-8">
-              {MILESTONES.map((m, i) => (
-                <Reveal key={m.year} delay={i * 0.05}>
-                  <div
-                    className={`relative flex items-start gap-6 md:gap-0 ${
-                      i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                    }`}
-                  >
-                    {/* dot */}
-                    <div className="absolute left-4 z-10 flex h-8 w-8 -translate-x-1/2 items-center justify-center rounded-full border-4 border-background bg-gold md:left-1/2">
-                      <span className="h-2 w-2 rounded-full bg-navy" />
-                    </div>
-                    {/* card */}
-                    <div className="ml-12 w-full md:ml-0 md:w-1/2 md:px-8">
-                      <div className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:shadow-soft-lg">
-                        <div className="text-sm font-semibold text-brand-blue">
-                          {m.year}
-                        </div>
-                        <h3 className="mt-1 text-lg font-semibold text-navy">
-                          {m.title}
-                        </h3>
-                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                          {m.description}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="hidden md:block md:w-1/2" />
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Leadership */}
-      <section className="bg-muted/40 py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Leadership"
-              title="Guided by experienced industry leaders"
-              description="A leadership team with decades of combined experience across global commodity trading, logistics and compliance."
-            />
-          </Reveal>
-          <StaggerGroup className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {LEADERS.map((l) => (
-              <StaggerItem key={l.name}>
-                <div className="group h-full overflow-hidden rounded-3xl border border-border bg-card text-center shadow-soft transition-all hover:-translate-y-1.5 hover:shadow-soft-lg">
-                  <div className="relative flex h-44 items-center justify-center bg-navy-gradient">
-                    <div className="pointer-events-none absolute inset-0 bg-grid opacity-25" />
-                    <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-white/10 text-2xl font-semibold text-gold ring-2 ring-white/20">
-                      {l.initials}
-                    </div>
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-base font-semibold text-navy">{l.name}</h3>
-                    <div className="text-xs font-medium text-brand-blue">{l.role}</div>
-                    <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-                      {l.bio}
-                    </p>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerGroup>
-        </div>
-      </section>
 
       {/* Worldwide presence */}
       <section className="bg-background py-20 sm:py-28">
@@ -385,34 +303,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-navy-gradient py-16">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 text-center sm:px-6 md:flex-row md:text-left lg:px-8">
-          <div>
-            <h2 className="text-2xl font-semibold text-white sm:text-3xl">
-              Let&apos;s build a lasting supply partnership
-            </h2>
-            <p className="mt-2 text-white/70">
-              Talk to our team about your sourcing requirements.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Button
-              onClick={() => setPage("contact")}
-              className="rounded-full bg-gold text-navy hover:bg-gold-soft"
-            >
-              Contact Us
-            </Button>
-            <Button
-              onClick={() => openInquiry()}
-              variant="outline"
-              className="rounded-full border-white/30 bg-white/5 text-white hover:bg-white/10 hover:text-white"
-            >
-              Request a Quote
-            </Button>
-          </div>
-        </div>
-      </section>
+
     </>
   );
 }

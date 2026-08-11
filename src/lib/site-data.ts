@@ -27,7 +27,12 @@ export type PageId =
   | "industries"
   | "network"
   | "why-us"
-  | "contact";
+  | "contact"
+  | "product-petrochemical"
+  | "product-sugar"
+  | "product-rice"
+  | "product-oils"
+  | "product-gas";
 
 export const NAV_ITEMS: { id: PageId; label: string }[] = [
   { id: "home", label: "Home" },
@@ -67,8 +72,7 @@ export const PRODUCTS: Product[] = [
     id: "petrochemical",
     name: "Petrochemical Products",
     tagline: "Feedstock & intermediates for industrial scale",
-    image:
-      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6c1369dd9112.jpg",
+    image: "/product-petrochemical.jpg",
     icon: FlaskConical,
     description:
       "A comprehensive portfolio of petrochemical feedstocks, solvents and intermediates sourced from certified refineries and delivered to manufacturers worldwide with full compliance documentation.",
@@ -105,8 +109,7 @@ export const PRODUCTS: Product[] = [
     id: "rice",
     name: "Cream in Rice",
     tagline: "Premium milled rice for discerning markets",
-    image:
-      "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d69f65811859.jpg",
+    image: "/product-rice.jpg",
     icon: Wheat,
     description:
       "Carefully selected cream-grade milled rice with consistent grain length, low breakage and superior cooking characteristics — supplied in bulk, retail and custom packaging.",
@@ -411,14 +414,14 @@ export interface Office {
 }
 
 export const OFFICES: Office[] = [
-  { city: "Dubai", country: "UAE", type: "Headquarters", x: 62, y: 47 },
-  { city: "Rotterdam", country: "Netherlands", type: "Regional Hub", x: 49, y: 33 },
-  { city: "Singapore", country: "Singapore", type: "Regional Hub", x: 77, y: 58 },
-  { city: "Houston", country: "USA", type: "Regional Hub", x: 22, y: 42 },
-  { city: "São Paulo", country: "Brazil", type: "Logistics Hub", x: 33, y: 70 },
-  { city: "Mumbai", country: "India", type: "Logistics Hub", x: 68, y: 50 },
-  { city: "Shanghai", country: "China", type: "Logistics Hub", x: 80, y: 44 },
-  { city: "Lagos", country: "Nigeria", type: "Logistics Hub", x: 49, y: 56 },
+  { city: "Dubai", country: "UAE", type: "Headquarters", x: 65.3, y: 36.0 },
+  { city: "Rotterdam", country: "Netherlands", type: "Regional Hub", x: 51.2, y: 21.1 },
+  { city: "Singapore", country: "Singapore", type: "Regional Hub", x: 78.8, y: 49.2 },
+  { city: "Houston", country: "USA", type: "Regional Hub", x: 23.5, y: 33.5 },
+  { city: "São Paulo", country: "Brazil", type: "Logistics Hub", x: 37.0, y: 63.0 },
+  { city: "Mumbai", country: "India", type: "Logistics Hub", x: 70.2, y: 39.4 },
+  { city: "Shanghai", country: "China", type: "Logistics Hub", x: 83.7, y: 32.6 },
+  { city: "Lagos", country: "Nigeria", type: "Logistics Hub", x: 50.9, y: 46.3 },
 ];
 
 /* ---------------- Supply chain steps ---------------- */
@@ -476,9 +479,9 @@ export const WORKFLOW: WorkflowStep[] = [
 
 /* ---------------- Contact info ---------------- */
 export const CONTACT = {
-  address: "Level 24, Trade Centre Tower, Sheikh Zayed Road, Dubai, UAE",
-  phone: "+971 4 555 0199",
-  email: "trade@safeglobal.com",
+  address: "Level 42, Emirates Towers, Dubai, UAE",
+  phone: "+971 569891213",
+  email: "chand.mohamed@safeglobal.world",
   hours: "Sunday – Thursday · 9:00 AM – 6:00 PM (GST)",
   social: [
     { label: "LinkedIn", href: "#" },

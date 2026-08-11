@@ -63,17 +63,7 @@ export function Footer() {
           {/* brand + newsletter */}
           <div className="lg:col-span-4">
             <div className="flex items-center gap-2.5">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/20">
-                <Globe className="h-5 w-5" />
-              </span>
-              <span className="flex flex-col leading-none">
-                <span className="text-lg font-semibold tracking-tight">
-                  Safe<span className="text-gradient-gold">global</span>
-                </span>
-                <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.22em] text-white/60">
-                  Global Trading
-                </span>
-              </span>
+              <img src="/logo.png" alt="Safeglobal" className="h-10 w-auto object-contain" />
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/65">
               Connecting markets and delivering quality across petrochemicals,
@@ -128,7 +118,7 @@ export function Footer() {
               {PRODUCTS.map((p) => (
                 <li key={p.id}>
                   <button
-                    onClick={() => setPage("products")}
+                    onClick={() => setPage(`product-${p.id}` as any)}
                     className="text-white/70 transition-colors hover:text-gold"
                   >
                     {p.name}
