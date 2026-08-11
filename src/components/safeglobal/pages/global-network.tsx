@@ -154,7 +154,7 @@ export function GlobalNetworkPage() {
                   </div>
                 ))}
                 <div className="ml-auto hidden text-white/40 sm:block">
-                  {OFFICES.length} offices · 45+ countries served
+                  {OFFICES.length} offices · 6 continents served
                 </div>
               </div>
             </div>

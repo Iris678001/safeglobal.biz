@@ -55,10 +55,6 @@ export function AboutPage() {
                     className="aspect-[4/5] w-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-4 hidden rounded-2xl glass p-5 shadow-soft-lg sm:block">
-                  <div className="text-3xl font-semibold text-navy">18+</div>
-                  <div className="text-xs text-muted-foreground">years of global trade</div>
-                </div>
               </div>
             </Reveal>
             <Reveal delay={0.1}>
@@ -66,7 +62,7 @@ export function AboutPage() {
                 align="left"
                 eyebrow="Company Overview"
                 title="A trusted name in international commodity trading"
-                description="Founded in 2007, Safeglobal has grown from a regional trading house into a diversified global distributor. Today we supply petrochemicals, agri-commodities and energy products to over 1,200 B2B clients across six continents."
+                description="Safeglobal is built on a foundation of unyielding integrity, deep market expertise, and an unwavering commitment to operational excellence. We partner with leading producers and buyers worldwide, ensuring transparent and reliable distribution of petrochemicals, agri-commodities, and energy products."
               />
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
                 Our strength lies in a vertically integrated approach — combining
@@ -75,18 +71,24 @@ export function AboutPage() {
                 us deliver consistency, transparency and value at every stage of
                 the supply chain, regardless of market volatility.
               </p>
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                {STATS.slice(0, 4).map((s) => (
-                  <div
-                    key={s.label}
-                    className="rounded-2xl border border-border bg-card p-4"
-                  >
-                    <div className="text-2xl font-semibold text-navy">
-                      <AnimatedCounter value={s.value} suffix={s.suffix} />
-                    </div>
-                    <div className="mt-1 text-xs text-muted-foreground">{s.label}</div>
-                  </div>
-                ))}
+              
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-none border-l-2 border-gold bg-muted/40 p-5">
+                  <div className="font-semibold text-navy">Uncompromising Quality</div>
+                  <div className="mt-1 text-xs text-muted-foreground">Rigorous vetting and end-to-end quality assurance for every shipment.</div>
+                </div>
+                <div className="rounded-none border-l-2 border-gold bg-muted/40 p-5">
+                  <div className="font-semibold text-navy">Reliable Fulfillment</div>
+                  <div className="mt-1 text-xs text-muted-foreground">Predictable delivery timelines powered by robust global logistics networks.</div>
+                </div>
+                <div className="rounded-none border-l-2 border-gold bg-muted/40 p-5">
+                  <div className="font-semibold text-navy">Financial Stability</div>
+                  <div className="mt-1 text-xs text-muted-foreground">Secure trading operations backed by strong banking relationships.</div>
+                </div>
+                <div className="rounded-none border-l-2 border-gold bg-muted/40 p-5">
+                  <div className="font-semibold text-navy">Market Intelligence</div>
+                  <div className="mt-1 text-xs text-muted-foreground">Strategic procurement based on real-time global commodity insights.</div>
+                </div>
               </div>
             </Reveal>
           </div>
@@ -267,12 +269,12 @@ export function AboutPage() {
               <div className="relative overflow-hidden rounded-3xl border border-border bg-muted/40 p-8 shadow-soft">
                 <div className="grid grid-cols-3 gap-4">
                   {[
-                    { v: 8, s: "", l: "Offices globally" },
-                    { v: 45, s: "+", l: "Countries served" },
+                    { v: 8, s: "", l: "Global Hubs" },
+                    { v: "✓", s: "", l: "Quality Assured" },
                     { v: 6, s: "", l: "Continents" },
                     { v: 24, s: "/7", l: "Operations" },
-                    { v: 30, s: "+", l: "Carrier partners" },
-                    { v: 15, s: "+", l: "Warehouses" },
+                    { v: "✓", s: "", l: "Vetted Partners" },
+                    { v: "✓", s: "", l: "Secure Storage" },
                   ].map((x) => (
                     <div
                       key={x.l}
