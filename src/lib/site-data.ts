@@ -84,7 +84,7 @@ export const PRODUCTS: Product[] = [
     ],
     industries: ["Chemical Industry", "Manufacturing", "Energy"],
     quality:
-      "ISO certified sourcing with full certificate of analysis, REACH compliance and batch traceability on every shipment.",
+      "Vetted sourcing with full certificate of analysis and batch traceability on every shipment.",
   },
   {
     id: "sugar",
@@ -103,7 +103,7 @@ export const PRODUCTS: Product[] = [
     ],
     industries: ["Food Processing", "Agriculture", "Manufacturing"],
     quality:
-      "HACCP, HALAL and FDA-aligned standards with moisture and polarisation tests verified pre-shipment.",
+      "Strict food safety and quality standards with moisture and polarisation tests verified pre-shipment.",
   },
   {
     id: "rice",
@@ -266,7 +266,7 @@ export const REASONS: Reason[] = [
   {
     title: "International Standards",
     description:
-      "ISO, HACCP, HALAL and REACH-aligned processes underpin every product and shipment we handle.",
+      "Stringent internal quality and safety processes underpin every product and shipment we handle.",
     icon: Globe2,
   },
   {

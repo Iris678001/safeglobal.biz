@@ -106,7 +106,7 @@ export function HomePage() {
               className="mt-12 flex flex-wrap gap-x-8 gap-y-4"
             >
               {[
-                { icon: ShieldCheck, label: "ISO & HACCP certified" },
+                { icon: ShieldCheck, label: "Rigorous quality control" },
                 { icon: Globe2, label: "6 continents served" },
                 { icon: Ship, label: "End-to-end logistics" },
               ].map(({ icon: Icon, label }) => (

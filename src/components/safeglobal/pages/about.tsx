@@ -180,8 +180,8 @@ export function AboutPage() {
                 {[
                   {
                     icon: ShieldCheck,
-                    title: "Certified sourcing",
-                    text: "Suppliers vetted against ISO, HACCP, HALAL and REACH requirements.",
+                    title: "Rigorous sourcing",
+                    text: "Suppliers vetted against strict internal quality, safety and compliance standards.",
                   },
                   {
                     icon: Award,
@@ -209,10 +209,10 @@ export function AboutPage() {
             <Reveal delay={0.1}>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: "ISO 9001", text: "Quality management" },
-                  { label: "HACCP", text: "Food safety" },
-                  { label: "HALAL", text: "Certified processing" },
-                  { label: "REACH", text: "Chemical compliance" },
+                  { label: "Quality First", text: "End-to-end management" },
+                  { label: "Safety Verified", text: "Rigorous standards" },
+                  { label: "Global Reach", text: "Trusted network" },
+                  { label: "Compliance", text: "Regulatory alignment" },
                 ].map((c) => (
                   <div
                     key={c.label}
