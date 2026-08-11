@@ -144,23 +144,23 @@ export function HomePage() {
               <div className="relative">
                 <div className="overflow-hidden rounded-none">
                   <img
-                    src="/ship.jpg"
-                    alt="Container ship carrying global trade cargo"
+                    src="/ship1.jpg"
+                    alt="Safeglobal shipping"
                     className="aspect-[4/3] w-full object-cover"
                   />
                 </div>
                 {/* floating stat card */}
                 <div className="absolute -bottom-6 -right-4 w-44 rounded-sm glass p-4 sm:-right-6">
                   <div className="flex items-center gap-2 text-navy">
-                    <TrendingUp className="h-4 w-4 text-brand-blue" />
+                    <ShieldCheck className="h-4 w-4 text-brand-blue" />
                     <span className="text-xs font-semibold uppercase tracking-wide">
-                      Trade Volume
+                      Trusted
                     </span>
                   </div>
-                  <div className="mt-1 text-2xl font-semibold text-navy">
-                    $2.4B+
+                  <div className="mt-1 text-xl font-semibold leading-tight text-navy">
+                    Global Network
                   </div>
-                  <div className="text-xs text-muted-foreground">annual turnover</div>
+                  <div className="mt-1 text-xs text-muted-foreground">Connecting 6 continents</div>
                 </div>
                 <div className="absolute -left-4 -top-4 hidden h-20 w-20 items-center justify-center rounded-none bg-navy text-white sm:flex">
                   <Anchor className="h-8 w-8" />
