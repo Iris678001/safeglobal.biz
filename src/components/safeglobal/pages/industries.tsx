@@ -88,23 +88,7 @@ export function IndustriesPage() {
         </div>
       </section>
 
-      {/* Stats band */}
-      <section className="bg-muted/40 py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
-            {STATS.map((s, i) => (
-              <Reveal key={s.label} delay={i * 0.08}>
-                <div className="text-center">
-                  <div className="text-4xl font-semibold tracking-tight text-navy sm:text-5xl">
-                    <AnimatedCounter value={s.value} suffix={s.suffix} />
-                  </div>
-                  <div className="mt-2 text-sm text-muted-foreground">{s.label}</div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Sector deep-dive */}
       <section className="bg-background py-20 sm:py-28">
