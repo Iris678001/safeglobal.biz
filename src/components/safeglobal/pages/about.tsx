@@ -18,11 +18,9 @@ import {
   IMAGES,
   CORE_VALUES,
   OFFICES,
-  STATS,
 } from "@/lib/site-data";
 import { useNavStore } from "@/lib/nav-store";
 import { useInquiry } from "@/lib/inquiry-store";
-import { AnimatedCounter } from "../animated-counter";
 
 export function AboutPage() {
   const { setPage } = useNavStore();

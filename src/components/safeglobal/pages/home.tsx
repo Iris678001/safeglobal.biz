@@ -17,7 +17,6 @@ import { SectionHeading } from "../section-heading";
 import { AnimatedCounter } from "../animated-counter";
 import {
   IMAGES,
-  STATS,
   PRODUCTS,
   INDUSTRIES,
   REASONS,
@@ -173,7 +172,7 @@ export function HomePage() {
                 eyebrow="Who We Are"
                 align="left"
                 title="A global trading partner built on trust and reliability"
-                description="For nearly two decades, Safeglobal has connected manufacturers, suppliers and businesses across international markets. We combine deep commodity expertise with an integrated supply chain to deliver quality products on time, every time."
+                description="Established in 2025, Safeglobal connects manufacturers, suppliers and businesses across international markets. We combine deep commodity expertise with an integrated supply chain to deliver quality products on time, every time."
               />
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {[
@@ -452,8 +451,8 @@ export function HomePage() {
               <div className="relative">
                 <Quote className="h-10 w-10 text-gold" />
                 <p className="mt-5 text-balance text-2xl font-medium leading-relaxed sm:text-3xl">
-                  &ldquo;Safeglobal has been a dependable partner for our raw
-                  material supply for over six years. Their consistency, quality
+                  &ldquo;Safeglobal has been a highly dependable partner for our raw
+                  material supply. Their consistency, quality
                   assurance and logistics coordination are simply best in class.&rdquo;
                 </p>
                 <div className="mt-7 flex items-center gap-4">

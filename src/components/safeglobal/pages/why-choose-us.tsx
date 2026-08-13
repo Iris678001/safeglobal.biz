@@ -5,10 +5,9 @@ import { Button } from "@/components/ui/button";
 import { PageHero } from "../page-hero";
 import { SectionHeading } from "../section-heading";
 import { Reveal, StaggerGroup, StaggerItem } from "../reveal";
-import { REASONS, STATS } from "@/lib/site-data";
+import { REASONS } from "@/lib/site-data";
 import { useNavStore } from "@/lib/nav-store";
 import { useInquiry } from "@/lib/inquiry-store";
-import { AnimatedCounter } from "../animated-counter";
 
 export function WhyChooseUsPage() {
   const { setPage } = useNavStore();
@@ -55,15 +54,20 @@ export function WhyChooseUsPage() {
         </div>
       </section>
 
-      {/* Stats band */}
+      {/* Trust markers */}
       <section className="bg-navy-gradient py-16 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
-            {STATS.map((s, i) => (
-              <Reveal key={s.label} delay={i * 0.08}>
+            {[
+              { title: "Founded in 2025", label: "A modern trading partner" },
+              { title: "Global Reach", label: "Seamless cross-border trade" },
+              { title: "Trusted Network", label: "Vetted partners worldwide" },
+              { title: "Reliable Logistics", label: "End-to-end visibility" },
+            ].map((s, i) => (
+              <Reveal key={s.title} delay={i * 0.08}>
                 <div className="text-center">
-                  <div className="text-4xl font-semibold tracking-tight sm:text-5xl">
-                    <AnimatedCounter value={s.value} suffix={s.suffix} />
+                  <div className="text-2xl font-semibold tracking-tight sm:text-3xl text-gold">
+                    {s.title}
                   </div>
                   <div className="mt-2 text-sm text-white/70">{s.label}</div>
                 </div>
@@ -152,7 +156,7 @@ export function WhyChooseUsPage() {
             {[
               {
                 quote:
-                  "Safeglobal's consistency in quality and lead time has transformed how we plan our production. They're an extension of our procurement team.",
+                  "Safeglobal's commitment to quality is evident in every shipment. Their logistics coordination across international borders is remarkable.",
                 name: "Markus Klein",
                 role: "Procurement Director, EU Manufacturing",
                 initials: "MK",

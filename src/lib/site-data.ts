@@ -223,19 +223,7 @@ export const INDUSTRIES: Industry[] = [
   },
 ];
 
-/* ---------------- Stats / Counters ---------------- */
-export interface Stat {
-  value: number;
-  suffix: string;
-  label: string;
-}
 
-export const STATS: Stat[] = [
-  { value: 45, suffix: "+", label: "Countries Served" },
-  { value: 1200, suffix: "+", label: "B2B Clients Worldwide" },
-  { value: 18, suffix: " yrs", label: "Global Trading Experience" },
-  { value: 99, suffix: "%", label: "On-Time Delivery Rate" },
-];
 
 /* ---------------- Why Choose Us ---------------- */
 export interface Reason {
@@ -320,87 +308,6 @@ export const CORE_VALUES: Reason[] = [
     description:
       "We think across borders, cultures and time zones to connect markets seamlessly.",
     icon: Globe2,
-  },
-];
-
-/* ---------------- Milestones ---------------- */
-export interface Milestone {
-  year: string;
-  title: string;
-  description: string;
-}
-
-export const MILESTONES: Milestone[] = [
-  {
-    year: "2007",
-    title: "Founded",
-    description:
-      "Safeglobal established as a regional trading house focused on edible commodities.",
-  },
-  {
-    year: "2011",
-    title: "Petrochemical Division",
-    description:
-      "Expanded into petrochemical trading with dedicated sourcing partners in the Gulf.",
-  },
-  {
-    year: "2015",
-    title: "Global Network",
-    description:
-      "Crossed 25 export destinations and opened representative offices on three continents.",
-  },
-  {
-    year: "2019",
-    title: "Energy & Gas",
-    description:
-      "Launched the gas products division to serve energy and industrial clients at scale.",
-  },
-  {
-    year: "2022",
-    title: "Digital Supply Chain",
-    description:
-      "Deployed an integrated logistics and compliance platform across all trade lanes.",
-  },
-  {
-    year: "2025",
-    title: "Sustainable Sourcing",
-    description:
-      "Committed to verified sustainable sourcing and carbon-tracked shipments globally.",
-  },
-];
-
-/* ---------------- Leadership ---------------- */
-export interface Leader {
-  name: string;
-  role: string;
-  initials: string;
-  bio: string;
-}
-
-export const LEADERS: Leader[] = [
-  {
-    name: "Adrian Mercer",
-    role: "Chief Executive Officer",
-    initials: "AM",
-    bio: "Two decades of international trading leadership across energy, agriculture and chemicals.",
-  },
-  {
-    name: "Lena Fischer",
-    role: "Chief Operating Officer",
-    initials: "LF",
-    bio: "Architect of our global logistics platform and integrated supply chain operations.",
-  },
-  {
-    name: "Ravi Nair",
-    role: "Head of Petrochemicals",
-    initials: "RN",
-    bio: "Specialist in refining, feedstocks and compliance for industrial chemical markets.",
-  },
-  {
-    name: "Sofia Romano",
-    role: "Head of Agri-Commodities",
-    initials: "SR",
-    bio: "Leads our sugar, rice and edible oils desks with deep origin-market expertise.",
   },
 ];
 

@@ -241,8 +241,8 @@ export function GlobalNetworkPage() {
                     <Ship className="h-4 w-4 text-brand-blue" />
                     <span className="text-xs font-semibold uppercase">Sea Freight</span>
                   </div>
-                  <div className="text-2xl font-semibold text-navy">2,500+</div>
-                  <div className="text-xs text-muted-foreground">shipments / year</div>
+                  <div className="text-xl font-semibold text-navy leading-tight">High Volume</div>
+                  <div className="text-xs text-muted-foreground mt-1">Continuous capacity</div>
                 </div>
               </div>
             </Reveal>
